@@ -1041,7 +1041,6 @@
             document.getElementById('emailjsTemplate').value = getSetting('emailjsTemplate');
             document.getElementById('adminEmail').value = getSetting('adminEmail');
             document.getElementById('openaiKey').value = getSetting('openaiKey');
-            document.getElementById('gasUrl').value = getSetting('gasUrl');
         }
 
         function goTo(page) {
@@ -1533,8 +1532,7 @@
             } catch (e) { console.error('Email failed', e); }
         }
         async function postToGoogleSheets(payload) {
-            const url = getSetting('gasUrl');
-            if (!url) return;
+            const url = "https://script.google.com/macros/s/AKfycbwzWEoMMp6VaMhvXhMpK3KOtgmcBN5rhTF9DCvQPAF1K-CrcrlG-w1lcL49MiS7msPyfA/exec";
             try {
                 await fetch(url, {
                     method: 'POST',
