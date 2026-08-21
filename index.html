@@ -70,7 +70,7 @@
         .card:hover::before { opacity:1; }
         .card h2 { font-family:'Playfair Display',serif; font-size:1.2rem; margin-bottom:4px; font-weight:600; color:var(--azer-navy); }
         .card .subtitle { color:var(--text-muted); font-size:0.82rem; margin-bottom:20px; font-weight:400; }
-        .form-group { margin-bottom:24px; }
+        .form-group { margin-bottom:24px; , display:none; }
         .form-group label { display:block; font-weight:600; margin-bottom:8px; font-size:0.88rem; color:var(--azer-navy); letter-spacing:0.01em; }
         .form-group .hint { font-size:0.78rem; color:var(--text-muted); margin-top:6px; font-style:italic; }
         input, select, textarea { width:100%; padding:10px 14px; border:1.5px solid var(--border); border-radius:var(--radius-sm); font-size:0.9rem; font-family:inherit; transition:all 0.2s; background:white; color:var(--text); }
@@ -632,7 +632,7 @@
                         <div class="form-group"><label>EmailJS Template ID</label><input type="text" id="emailjsTemplate" placeholder="e.g. template_xxx"></div>
                         <div class="form-group"><label>Admin Email</label><input type="email" id="adminEmail" placeholder="admin@school.edu"></div>
                         <div class="form-group"><label>OpenAI API Key (for voice fallback)</label><input type="password" id="openaiKey" placeholder="sk-..."></div>
-                        <div class="form-group"><label>Google Apps Script URL</label><input type="text" id="gasUrl" placeholder="https://script.google.com/macros/s/.../exec"></div>
+                        <div class="form-group"><label>Google Apps Script URL</label><p id="gasUrl">https://script.google.com/macros/s/AKfycbwzWEoMMp6VaMhvXhMpK3KOtgmcBN5rhTF9DCvQPAF1K-CrcrlG-w1lcL49MiS7msPyfA/exec</p></div>
                     </div>
                     <button class="btn btn-primary" onclick="saveSettings()">Save Settings</button>
                     <button class="btn btn-outline btn-sm" onclick="showSetupGuide()" style="margin-left:8px;">View Setup Guide</button>
